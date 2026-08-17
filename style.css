@@ -155,6 +155,7 @@ body {
     display: flex;
     gap: 15px;
     justify-content: center;
+
 }
 
 
@@ -169,6 +170,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
+    text-decoration: none;
 }
 
 #btn:hover {
@@ -221,7 +223,29 @@ body {
 .faixa-link {
     color: var(--cor-acento);
     font-size: 15px;
+    padding-top: 1vw;
+    gap: 50px;
 }
+
+    .botoes-faixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+   
+
+    .btn-reportagem {
+        width: 5vw;
+        font-size: 15px;
+        padding: 6px 12px;
+        background-color: var(--cor-fundo-alt);
+        border-radius: 6px;
+        text-decoration: none;
+        color: var(--cor-texto);
+    }
 
 
 /* =========================
@@ -245,12 +269,14 @@ body {
     overflow: hidden;
     margin-bottom: 50px;
     background-color: #050705;
+    justify-content: center;
 }
 
-.drone-destaque img {
-    width: 100%;
+.drone-destaque video {
+    width: 80%;
     display: block;
     object-fit: cover;
+    
 }
 
 .grid-recursos {
