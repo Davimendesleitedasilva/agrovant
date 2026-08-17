@@ -1,0 +1,580 @@
+:root {
+    --cor-fundo: #0e1310;
+    --cor-fundo-alt: #151b16;
+    --cor-primaria: #0e1310;
+    --cor-acento: #3fae5c;
+    --cor-acento-escuro: #2f8a47;
+    --cor-texto: #ffffff;
+    --cor-texto-suave: #b8c2ba;
+    --cor-borda: #2a332c;
+    --font: "Segoe UI", Roboto, sans-serif;
+}
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--font);
+    color: var(--cor-texto);
+}
+
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+.cabecalho {
+    background-color: var(--cor-primaria);
+    color: white;
+    min-height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid var(--cor-borda);
+    z-index: 1000;
+}
+
+.cabecalho h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.cabecalho ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.cabecalho a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.cabecalho a:hover {
+    color: var(--cor-acento);
+}
+
+.btn-header {
+    background-color: var(--cor-acento);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-header:hover {
+    background-color: var(--cor-acento-escuro);
+}
+
+
+/* =========================
+   SEÇÃO PRINCIPAL / VÍDEO
+   ========================= */
+
+#funcoes {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+#funcoes video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+/* CAMADA ESCURA SOBRE O VÍDEO */
+
+#funcoes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(10,15,10,0.85) 100%);
+    z-index: 1;
+}
+
+
+/* CONTEÚDO SOBRE O VÍDEO */
+
+#funcoes .conteudo {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+}
+
+#funcoes h1 {
+    color: white;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+#funcoes .subtitulo {
+    color: var(--cor-texto-suave);
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.botoes-hero {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+/* BOTÕES */
+
+#btn {
+    background-color: var(--cor-acento);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#btn:hover {
+    background-color: var(--cor-acento-escuro);
+}
+
+#btn-outline {
+    background-color: transparent;
+    color: white;
+    padding: 12px 25px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#btn-outline:hover {
+    border-color: var(--cor-acento);
+    color: var(--cor-acento);
+}
+
+
+/* =========================
+   FAIXA DE DESTAQUE
+   ========================= */
+
+.faixa {
+    background-color: #0a0d0a;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.faixa-titulo {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.faixa-icones {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 18px;
+    color: var(--cor-texto-suave);
+    font-size: 16px;
+}
+
+.faixa-link {
+    color: var(--cor-acento);
+    font-size: 15px;
+}
+
+
+/* =========================
+   ESPECIFICAÇÃO
+   ========================= */
+
+#especificacao {
+    background-color: var(--cor-fundo);
+    padding: 80px 40px;
+}
+
+#especificacao .conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.drone-destaque {
+    border: 2px solid var(--cor-acento);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    background-color: #050705;
+}
+
+.drone-destaque img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.grid-recursos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-recurso {
+    background-color: var(--cor-fundo-alt);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.card-recurso .icone {
+    font-size: 26px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.card-recurso h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.card-recurso p {
+    font-size: 14px;
+    color: var(--cor-texto-suave);
+    line-height: 1.5;
+}
+
+
+/* =========================
+   DEPOIMENTOS
+   ========================= */
+
+#depoimentos {
+    background: url('assets/imagem 3.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+#depoimentos .conteudo {
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#depoimentos h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.card-depoimento {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.avatar {
+    min-width: 3vw;
+    height: 3vw;
+    border-radius: 70%;
+    background-color: var(--cor-acento);
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+   
+}
+
+.estrelas {
+    color: #f5b301;
+    margin-bottom: 8px;
+}
+
+.citacao {
+    font-size: 15px;
+    color: var(--cor-texto-suave);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.autor {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rodape-depoimento {
+    color: var(--cor-texto);
+    font-size: 25px;
+}
+
+
+/* =========================
+   AGENDAMENTO
+   ========================= */
+
+#agende {
+    background-color: var(--cor-fundo);
+    padding: 80px 40px;
+}
+
+.agende-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.agende-texto {
+    flex: 1 1 350px;
+    text-align: left;
+}
+
+.agende-texto h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.agende-texto p {
+    color: var(--cor-texto-suave);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.agende-form {
+    flex: 1 1 320px;
+    background-color: white;
+    color: #111;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.agende-form label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.agende-form input {
+    padding: 10px 12px;
+    border: 1px solid var(--cor-acento);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.agende-form button {
+    margin-top: 20px;
+    background-color: var(--cor-acento);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.agende-form button:hover {
+    background-color: var(--cor-acento-escuro);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background-color: #0a0d0a;
+    padding: 25px;
+    color: var(--cor-texto-suave);
+    text-align: center;
+    border-top: 1px solid var(--cor-borda);
+    font-size: 13px;
+}
+
+
+/* =========================
+   BOTÃO VOLTAR AO TOPO
+   ========================= */
+
+#btn-topo {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 42px;
+    height: 42px;
+    background-color: var(--cor-acento);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    z-index: 2000;
+}
+
+#btn-topo:hover {
+    background-color: var(--cor-acento-escuro);
+}
+
+
+/* =========================
+   RESPONSIVIDADE - TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        height: auto;
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cabecalho h1 {
+        font-size: 20px;
+    }
+
+    .cabecalho ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cabecalho a {
+        font-size: 14px;
+    }
+
+    #funcoes h1 {
+        font-size: 38px;
+    }
+
+    #funcoes .subtitulo {
+        font-size: 17px;
+    }
+
+    .grid-recursos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .agende-grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .agende-texto {
+        text-align: center;
+    }
+}
+
+
+/* =========================
+   RESPONSIVIDADE - CELULAR
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .cabecalho {
+        padding: 12px 10px;
+    }
+
+    .cabecalho h1 {
+        font-size: 18px;
+    }
+
+    .cabecalho ul {
+        gap: 8px;
+    }
+
+    .cabecalho a {
+        font-size: 12px;
+
+        padding: 5px;
+    }
+
+    #funcoes h1 {
+        font-size: 30px;
+    }
+
+    #funcoes .subtitulo {
+        font-size: 15px;
+    }
+
+    .botoes-hero {
+        flex-direction: column;
+    }
+
+    #especificacao,
+    #depoimentos,
+    #agende {
+        padding: 50px 20px;
+    }
+
+    .grid-recursos {
+        grid-template-columns: 1fr;
+    }
+
+    .card-depoimento {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #btn-topo {
+        width: 38px;
+        height: 38px;
+
+        bottom: 15px;
+        right: 15px;
+    }
+}
