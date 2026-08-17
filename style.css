@@ -238,7 +238,7 @@ body {
    
 
     .btn-reportagem {
-        width: 5vw;
+   
         font-size: 15px;
         padding: 6px 12px;
         background-color: var(--cor-fundo-alt);
@@ -270,13 +270,15 @@ body {
     margin-bottom: 50px;
     background-color: #050705;
     justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .drone-destaque video {
-    width: 80%;
-    display: block;
+    width: 90%;
+    height: 100%;
     object-fit: cover;
-    
+    object-position: center;
 }
 
 .grid-recursos {
@@ -315,11 +317,14 @@ body {
    ========================= */
 
 #depoimentos {
-    background: url('assets/imagem 3.jpg') no-repeat center center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('assets/imagem 3.jpg') no-repeat center center;
     background-size: cover;
     padding: 80px 40px;
     text-align: center;
 }
+
 
 #depoimentos .conteudo {
     max-width: 700px;
