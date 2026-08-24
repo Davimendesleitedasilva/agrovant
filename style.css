@@ -319,7 +319,7 @@ body {
 #depoimentos {
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('assets/imagem 3.jpg') no-repeat center center;
+        url('assets/imagem3.jpg') no-repeat center center;
     background-size: cover;
     padding: 80px 40px;
     text-align: center;
